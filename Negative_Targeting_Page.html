@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Negative Targeting Page</title>
+    <link href="https://fonts.cdnfonts.com/css/amazon-ember" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <header class="font-amazon container">
+        <div class="pt-4 pb-[0.6rem] border-b-[3px] border-[#ebebeb] text-text_color">
+            <h1 class="text-3xl font-light">Enter <span class="font-medium">Negative Keywords</span> what you want to add:</h1>
+            <div class="choose-area flex items-start justify-start gap-11 mt-4">
+                <p class="text-sm ml-2 cursor-pointer active-text-area keywords-text-area text-area-link text-[#7f7f7f]">
+                    Negative keywords
+                </p>
+                <p class="text-sm cursor-pointer products-text-area text-area-link text-[#7f7f7f]">
+                    Negative Products
+                </p>
+            </div>
+        </div>
+        <div class="textarea-wrapper mt-6 max-w-[899px]">
+            <textarea class="textarea border-[1px] border-gray_border_color p-2 w-full h-[11.75rem] keywords-textarea placeholder:text-sm placeholder:text-[#b4b2b2]" placeholder="Enter your list and separate each itema with a new line" name="keywords" id="keywords"></textarea>
+            <textarea class="textarea display border-[1px] border-gray_border_color p-2 w-full h-[11.75rem] products-textarea placeholder:text-sm placeholder:text-[#b4b2b2]" placeholder="Enter your list and separate each itema with a new line" name="keywords" id="keywords"></textarea>
+        </div>
+    </header>
+    <main class="text-text_color">
+        <div class="container mx-10">
+            <div class="mt-[0.6rem]">
+                <div class="match-type-wrapper flex items-start justify-start gap-5">
+                    <p class="match-type text-sm font-medium flex items-center justify-between gap-[6px] text-[#515151]">
+                        Match Type <span class="hover-link relative">
+                            <i class="fa-solid fa-circle-question"></i>
+                            <span class="match-type-toaster hidden p-1 delay-300 transition-all font-medium bg-white after:contents-[''] after:w-3 after:h-3 after:border-r-[1px] after:border-t-[1px] after:rotate-[-45deg] after:z-[6] after:top-[-7px] after:right-[48%] after:absolute after:inline-block after:bg-white">
+                                Provide your fulfillment costs and see real-time cost comparisons between different fulfillment methods
+                            </span>
+                        </span>
+                    </p>
+                    <div class="flex items-center justify-between">
+                        <input id="exact" type="radio" name="matchType" checked class="appearance-none bg-white text-inherit w-[18px] h-[18px] rounded-[50%] border-[1px] border-[#bfbfbf] cursor-pointer checked:bg-[#0073c7] checked:border-none relative before:absolute before:contents-[''] before:w-2 before:h-2 before:block before:rounded-[50%] before:top-[5px] before:right-[5px] before:bg-white before:z-[2] before:scale-0 before:ease-in before:delay-150 checked:before:scale-100">
+                        <label  for="exact" class="label cursor-pointer text-sm ml-[3px]">Negative exact</label>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <input id="phrase" type="radio" name="matchType" class="appearance-none bg-white text-inherit w-[18px] h-[18px] rounded-[50%] border-[1px] border-[#bfbfbf] cursor-pointer checked:bg-[#0073c7] checked:border-none relative before:absolute before:contents-[''] before:w-2 before:h-2 before:block before:rounded-[50%] before:top-[5px] before:right-[5px] before:bg-white before:z-[2] before:scale-0 before:ease-in before:delay-150 checked:before:scale-100">
+                        <label for="phrase" class="label cursor-pointer text-sm ml-[3px]">Negative phrase</label>
+                    </div>
+                </div>
+                <p class="text-[25px] font-light mt-5 mb-3">
+                    Choose <span class="font-medium">Campaing Groups</span>/<span class="font-medium">Ad Groups</span>
+                </p>
+                <div class="match-type-wrapper flex items-center justify-start gap-5 mb-6 text-sm">
+                    <p class="match-type text-sm font-medium flex items-center justify-between gap-[6px] text-[#515151]">
+                        Add Negative Products to: <span class="hover-link relative">
+                            <i class="fa-solid fa-circle-question"></i>
+                            <span class="match-type-toaster hidden p-1 delay-300 transition-all font-medium bg-white after:contents-[''] after:w-3 after:h-3 after:border-r-[1px] after:border-t-[1px] after:rotate-[-45deg] after:z-[6] after:top-[-7px] after:right-[48%] after:absolute after:inline-block after:bg-white">
+                                Provide your fulfillment costs and see real-time cost comparisons between different fulfillment methods
+                            </span>
+                        </span>
+                    </p>
+                    <div class="flex items-center justify-between">
+                        <input id="campaign" type="radio" name="negativeKeywords" class="appearance-none bg-white text-inherit w-[18px] h-[18px] rounded-[50%] border-[1px] border-[#bfbfbf] cursor-pointer checked:bg-[#0073c7] checked:border-none relative before:absolute before:contents-[''] before:w-2 before:h-2 before:block before:rounded-[50%] before:top-[5px] before:right-[5px] before:bg-white before:z-[2] before:scale-0 before:ease-in before:delay-150 checked:before:scale-100">
+                        <label for="campaign" class="label cursor-pointer ml-[3px]">Campaign Group</label>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <input id="group" type="radio" name="negativeKeywords" checked class="appearance-none bg-white text-inherit w-[18px] h-[18px] rounded-[50%] border-[1px] border-[#bfbfbf] cursor-pointer checked:bg-[#0073c7] checked:border-none relative before:absolute before:contents-[''] before:w-2 before:h-2 before:block before:rounded-[50%] before:top-[5px] before:right-[5px] before:bg-white before:z-[2] before:scale-0 before:ease-in before:delay-150 checked:before:scale-100">
+                        <label for="group" class="label cursor-pointer ml-[3px]">Ad Group</label>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-start justify-between text-scroll_text border-b-scrollable_title_border border-b-[1px]">
+                <div class="w-full">
+                    <p class="bg-scrollable_title border-b-[1px] px-4 py-1.5 font-normal border-b-scrollable_title_border text-[#65707a]">
+                        Portfolios <span class="hover-link relative">
+                            <i class="fa-solid fa-circle-question text-sm"></i>
+                            <span class="match-type-toaster hidden p-1 delay-300 transition-all font-medium bg-white after:contents-[''] after:w-3 after:h-3 after:border-r-[1px] after:border-t-[1px] after:rotate-[-45deg] after:z-[6] after:top-[-7px] after:right-[48%] after:absolute after:inline-block after:bg-white">
+                                Provide your fulfillment costs and see real-time cost comparisons between different fulfillment methods
+                            </span>
+                        </span>
+                    </p>
+                    <div class="flex items-center justify-between pt-3 pb-2 pl-6 pr-3">
+                        <div class="relative">
+                            <input type="text" class="text-sm bg-[#f6f6f6] pl-[30px] w-[128px] focus:w-[188px] h-[26px] pb-[2px] rounded-xl placeholder:text-sm" placeholder="Search">
+                            <i class="fa-solid fa-magnifying-glass text-sm absolute top-2 left-[10px] text-[#b8b8b8]"></i>
+                        </div>
+                        <button class="bonnton bg-button_bg text-button_text w-[59px] h-[26px] rounded-xl text-sm font-medium">
+                            Clear
+                        </button>
+                    </div>
+                    <div class="porfolios-column overflow-y-scroll h-[17rem] flex items-start flex-col justify-start gap-[5px] text-sm">
+                        <div class="flex items-center justify-start gap-[10px] pl-2">
+                            <input name="portfoliosNameAll" type="checkbox" class="relative checked:bg-[#878787] scale-100">
+                            <label for="portfoliosNameAll" class="font-medium cursor-pointer">Select All</label>
+                        </div>
+                        <div class="flex items-center justify-between pr-1 w-full pl-2">
+                            <div class="flex items-center justify-start gap-[10px]">
+                                <input name="portfoliosName1" type="checkbox" class="check-with-label relative before:contents-[''] before:w-[7px] before:h-[2px] before:absolute before:bg-[#65707a] before:scale-0 checked:before:scale-100 before:z-[2] before:top-[5px] before:block before:right-[2.5px] checked:bg-white" checked>
+                                <label for="portfoliosName1" class="label-for-check cursor-pointer">01_iPhone 7 Case</label>
+                            </div>
+                            <i class="fa-solid fa-play hide-arrow cursor-pointer text-[11px] text-[#666666]"></i>
+                        </div>
+                        <div class="flex items-center justify-between pr-1 w-full pl-2">
+                            <div class="flex items-center justify-start gap-[10px]">
+                                <input name="portfoliosName2" type="checkbox" class="check-with-label relative before:contents-[''] before:w-[7px] before:h-[2px] before:absolute before:bg-[#65707a] before:scale-0 checked:before:scale-100 before:z-[2] before:top-[5px] before:block before:right-[2.5px] checked:bg-white" checked>
+                                <label for="portfoliosName2" class="label-for-check cursor-pointer">02_iPhone Brands</label>
+                            </div>
+                            <i class="fa-solid fa-play hide-arrow cursor-pointer text-[11px] text-[#666666]"></i>
+                        </div>
+                        <div class="flex items-center justify-between pr-1 w-full pl-2">
+                            <div class="flex items-center justify-start gap-[10px]">
+                                <input name="portfoliosName3" type="checkbox" class="check-with-label relative before:contents-[''] before:w-[7px] before:h-[2px] before:absolute before:bg-[#65707a] before:scale-0 checked:before:scale-100 before:z-[2] before:top-[5px] before:block before:right-[2.5px] checked:bg-white">
+                                <label for="portfoliosName3" class="label-for-check cursor-pointer">Samsung case Profitable</label>
+                            </div>
+                            <i class="fa-solid fa-play hide-arrow cursor-pointer text-[11px] text-[#666666]"></i>
+                        </div>
+                        <div class="flex items-center justify-between pr-1 w-full pl-2">
+                            <div class="flex items-center justify-start gap-[10px]">
+                                <input name="portfoliosName4" type="checkbox" class="check-with-label relative before:contents-[''] before:w-[7px] before:h-[2px] before:absolute before:bg-[#65707a] before:scale-0 checked:before:scale-100 before:z-[2] before:top-[5px] before:block before:right-[2.5px] checked:bg-white">
+                                <label for="portfoliosName4" class="label-for-check cursor-pointer">04_iPhone 9 online wallet with magnet</label>
+                            </div>
+                            <i class="fa-solid fa-play hide-arrow cursor-pointer text-[11px] text-[#666666]"></i>
+                        </div>
+                        <div class="flex items-center justify-between pr-1 w-full pl-2">
+                            <div class="flex items-center justify-start gap-[10px]">
+                                <input name="portfoliosName5" type="checkbox" class="check-with-label relative before:contents-[''] before:w-[7px] before:h-[2px] before:absolute before:bg-[#65707a] before:scale-0 checked:before:scale-100 before:z-[2] before:top-[5px] before:block before:right-[2.5px] checked:bg-white">
+                                <label for="portfoliosName5" class="label-for-check cursor-pointer">06_iPhone 7 and 7 Profitable</label>
+                            </div>
+                            <i class="fa-solid fa-play hide-arrow cursor-pointer text-[11px] text-[#666666]"></i>
+                        </div>
+                        <div class="flex items-center justify-between pr-1 w-full pl-2">
+                            <div class="flex items-center justify-start gap-[10px]">
+                                <input name="portfoliosName6" type="checkbox" class="check-with-label relative before:contents-[''] before:w-[7px] before:h-[2px] before:absolute before:bg-[#65707a] before:scale-0 checked:before:scale-100 before:z-[2] before:top-[5px] before:block before:right-[2.5px] checked:bg-white">
+                                <label for="portfoliosName6" class="label-for-check cursor-pointer">07_iPhone 7 - 8 wallet case</label>
+                            </div>
+                            <i class="fa-solid fa-play hide-arrow cursor-pointer text-[11px] text-[#666666]"></i>
+                        </div>
+                        <div class="flex items-center justify-between pr-1 w-full pl-2">
+                            <div class="flex items-center justify-start gap-[10px]">
+                                <input name="portfoliosName7" type="checkbox" class="check-with-label relative before:contents-[''] before:w-[7px] before:h-[2px] before:absolute before:bg-[#65707a] before:scale-0 checked:before:scale-100 before:z-[2] before:top-[5px] before:block before:right-[2.5px] checked:bg-white">
+                                <label for="portfoliosName7" class="label-for-check cursor-pointer">08_iPhone 7 Case Phrase</label>
+                            </div>
+                            <i class="fa-solid fa-play hide-arrow cursor-pointer text-[11px] text-[#666666]"></i>
+                        </div>
+                        <div class="flex items-center justify-between pr-1 w-full pl-2">
+                            <div class="flex items-center justify-start gap-[10px]">
+                            <input name="portfoliosName8" type="checkbox" class="check-with-label relative before:contents-[''] before:w-[7px] before:h-[2px] before:absolute before:bg-[#65707a] before:scale-0 checked:before:scale-100 before:z-[2] before:top-[5px] before:block before:right-[2.5px] checked:bg-white">
+                            <label for="portfoliosName8" class="label-for-check cursor-pointer">09_iPhone 7 wallet case for woman</label>
+                        </div>
+                            <i class="fa-solid fa-play hide-arrow cursor-pointer text-[11px] text-[#666666]"></i>
+                        </div>
+                        <div class="flex items-center justify-between pr-1 w-full pl-2">
+                            <div class="flex items-center justify-start gap-[10px]">
+                                <input name="portfoliosName9" type="checkbox" class="check-with-label relative before:contents-[''] before:w-[7px] before:h-[2px] before:absolute before:bg-[#65707a] before:scale-0 checked:before:scale-100 before:z-[2] before:top-[5px] before:block before:right-[2.5px] checked:bg-white">
+                                <label for="portfoliosName9" class="label-for-check cursor-pointer">10_iPhone 7 wallet case brands</label>
+                            </div>
+                            <i class="fa-solid fa-play hide-arrow cursor-pointer text-[11px] text-[#666666]"></i>
+                        </div>
+                        <div class="flex items-center justify-between pr-1 w-full pl-2">
+                            <div class="flex items-center justify-start gap-[10px]">
+                                <input name="portfoliosName10" type="checkbox" class="check-with-label relative before:contents-[''] before:w-[7px] before:h-[2px] before:absolute before:bg-[#65707a] before:scale-0 checked:before:scale-100 before:z-[2] before:top-[5px] before:block before:right-[2.5px] checked:bg-white">
+                                <label for="portfoliosName10" class="label-for-check cursor-pointer">13_iPhone 7 Case</label>
+                            </div>
+                            <i class="fa-solid fa-play hide-arrow cursor-pointer text-[11px] text-[#666666]"></i>
+                        </div>
+                        <div class="flex items-center justify-between pr-1 w-full pl-2">
+                            <div class="flex items-center justify-start gap-[10px]">
+                                <input name="portfoliosName11" type="checkbox" class="check-with-label relative before:contents-[''] before:w-[7px] before:h-[2px] before:absolute before:bg-[#65707a] before:scale-0 checked:before:scale-100 before:z-[2] before:top-[5px] before:block before:right-[2.5px] checked:bg-white">
+                                <label for="portfoliosName11" class="label-for-check cursor-pointer">iPhone 7 wallet case for woman</label>
+                            </div>
+                            <i class="fa-solid fa-play hide-arrow cursor-pointer text-[11px] text-[#666666]"></i>
+                        </div>
+                        <div class="flex items-center justify-between pr-1 w-full pl-2">
+                            <div class="flex items-center justify-start gap-[10px]">
+                                <input name="portfoliosName12" type="checkbox" class="check-with-label relative before:contents-[''] before:w-[7px] before:h-[2px] before:absolute before:bg-[#65707a] before:scale-0 checked:before:scale-100 before:z-[2] before:top-[5px] before:block before:right-[2.5px] checked:bg-white">
+                                <label for="portfoliosName12" class="label-for-check cursor-pointer">iPhone 7 wallet case for woman</label>
+                            </div>
+                            <i class="fa-solid fa-play hide-arrow cursor-pointer text-[11px] text-[#666666]"></i>
+                        </div>
+                        <div class="flex items-center justify-between pr-1 w-full pl-2">
+                            <div class="flex items-center justify-start gap-[10px]">
+                                <input name="portfoliosName13" type="checkbox" class="check-with-label relative before:contents-[''] before:w-[7px] before:h-[2px] before:absolute before:bg-[#65707a] before:scale-0 checked:before:scale-100 before:z-[2] before:top-[5px] before:block before:right-[2.5px] checked:bg-white">
+                                <label for="portfoliosName13" class="label-for-check cursor-pointer">iPhone 7 wallet case for woman</label>
+                            </div>
+                            <i class="fa-solid fa-play hide-arrow cursor-pointer text-[11px] text-[#666666]"></i>
+                        </div>
+                        <div class="flex items-center justify-between pr-1 w-full pl-2">
+                            <div class="flex items-center justify-start gap-[10px]">
+                                <input name="portfoliosName14" type="checkbox" class="check-with-label relative before:contents-[''] before:w-[7px] before:h-[2px] before:absolute before:bg-[#65707a] before:scale-0 checked:before:scale-100 before:z-[2] before:top-[5px] before:block before:right-[2.5px] checked:bg-white">
+                                <label for="portfoliosName14" class="label-for-check cursor-pointer">iPhone 7 wallet case for woman</label>
+                            </div>
+                            <i class="fa-solid fa-play hide-arrow cursor-pointer text-[11px] text-[#666666]"></i>
+                        </div>
+                        <div class="flex items-center justify-between pr-1 w-full pl-2">
+                            <div class="flex items-center justify-start gap-[10px]">
+                                <input name="portfoliosName15" type="checkbox" class="check-with-label relative before:contents-[''] before:w-[7px] before:h-[2px] before:absolute before:bg-[#65707a] before:scale-0 checked:before:scale-100 before:z-[2] before:top-[5px] before:block before:right-[2.5px] checked:bg-white">
+                                <label for="portfoliosName15" class="label-for-check cursor-pointer">iPhone 7 wallet case for woman</label>
+                            </div>
+                            <i class="fa-solid fa-play hide-arrow cursor-pointer text-[11px] text-[#666666]"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full">
+                    <p class="bg-scrollable_title border-b-[1px] border-r-[1px] border-l-[1px] px-4 py-1.5 font-normal border-scrollable_title_border text-[#65707a]">
+                        Campaing Groups <span class="hover-link relative">
+                            <i class="fa-solid fa-circle-question text-sm"></i>
+                            <span class="match-type-toaster hidden p-1 delay-300 transition-all font-medium bg-white after:contents-[''] after:w-3 after:h-3 after:border-r-[1px] after:border-t-[1px] after:rotate-[-45deg] after:z-[6] after:top-[-7px] after:right-[48%] after:absolute after:inline-block after:bg-white">
+                                Provide your fulfillment costs and see real-time cost comparisons between different fulfillment methods
+                            </span>
+                        </span>
+                    </p>
+                    <div class="flex items-center justify-between pt-3 pb-2 pl-6 pr-3 border-r-[1px] border-l-[1px] border-scrollable_title_border">
+                        <div class="relative">
+                            <input type="text" class="text-fm bg-[#f6f6f6] pl-[30px] w-[128px] focus:w-[188px] h-[26px] pb-[2px] rounded-xl placeholder:text-sm" placeholder="Search">
+                            <i class="fa-solid fa-magnifying-glass text-sm absolute top-2 left-[10px] text-[#b8b8b8]"></i>
+                        </div>
+                        <button class="bonnton bg-button_bg text-button_text w-[59px] h-[26px] rounded-xl text-sm font-medium">
+                            Clear
+                        </button>
+                    </div>
+                    <div class="overflow-y-scroll h-[17rem] flex items-start flex-col justify-start gap-[5px] border-b-scrollable_title_border border-r-[1px] border-l-[1px] text-sm">
+                        <div class="flex items-center justify-start gap-[10px] pl-2">
+                            <input type="checkbox" class="checked:bg-[#878787] scale-100">
+                            <label for="selectAll" class="font-medium cursor-pointer">Select All</label>
+                        </div>
+                        <div class="flex items-center justify-between pr-1 w-full pl-2">
+                            <div class="flex items-center justify-start gap-[10px]">
+                                <input name="brandName1" type="checkbox" class="check-with-label checked:bg-[#878787] scale-100">
+                                <label for="brandName1" class="label-for-check cursor-pointer">001_Reserch_iPhone_High</label>
+                            </div>
+                            <i class="fa-solid fa-play hide-arrow cursor-pointer text-[11px] text-[#666666]"></i>
+                        </div>
+                        <div class="flex items-center justify-between pr-1 w-full pl-2">
+                            <div class="flex items-center justify-start gap-[10px]">
+                                <input name="brandName2" type="checkbox" class="check-with-label checked:bg-[#878787] scale-100">
+                                <label for="brandName2" class="label-for-check cursor-pointer">002_Reserch_iPhone_Medium</label>
+                            </div>
+                            <i class="fa-solid fa-play hide-arrow cursor-pointer text-[11px] text-[#666666]"></i>
+                        </div>
+                        <div class="flex items-center justify-between pr-1 w-full pl-2">
+                            <div class="flex items-center justify-start gap-[10px]">
+                                <input name="brandName3" type="checkbox" class="check-with-label checked:bg-[#878787] scale-100">
+                                <label for="brandName3" class="label-for-check cursor-pointer">003_Reserch_iPhone_Low</label>
+                            </div>
+                            <i class="fa-solid fa-play hide-arrow cursor-pointer text-[11px] text-[#666666]"></i>
+                        </div>
+                        <div class="flex items-center justify-between pr-1 w-full pl-2">
+                            <div class="flex items-center justify-start gap-[10px]">
+                                <input name="brandName4" type="checkbox" class="check-with-label checked:bg-[#878787] scale-100">
+                                <label for="brandName4" class="label-for-check cursor-pointer">004_Reserch_iPhone_Iphone</label>
+                            </div>
+                            <i class="fa-solid fa-play hide-arrow cursor-pointer text-[11px] text-[#666666]"></i>
+                        </div>
+                        <div class="flex items-center justify-between pr-1 w-full pl-2">
+                            <div class="flex items-center justify-start gap-[10px]">
+                                <input name="brandName5" type="checkbox" class="check-with-label checked:bg-[#878787] scale-100">
+                                <label for="brandName5" class="label-for-check cursor-pointer">005_Reserch_iPhone_New</label>
+                            </div>
+                            <i class="fa-solid fa-play hide-arrow cursor-pointer text-[11px] text-[#666666]"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full active-scroll">
+                    <p class="bg-scrollable_title border-b-[1px] px-4 py-1.5 border-b-scrollable_title_border font-medium text-[#65707a]">
+                        Ad Groups <span class="hover-link relative">
+                            <i class="fa-solid fa-circle-question text-sm"></i>
+                            <span class="match-type-toaster hidden p-1 delay-300 transition-all font-medium bg-white after:contents-[''] after:w-3 after:h-3 after:border-r-[1px] after:border-t-[1px] after:rotate-[-45deg] after:z-[6] after:top-[-7px] after:right-[48%] after:absolute after:inline-block after:bg-white">
+                                Provide your fulfillment costs and see real-time cost comparisons between different fulfillment methods
+                            </span>
+                        </span>
+                    </p>
+                    <div class="flex items-center justify-between pt-3 pb-2 pl-6 pr-3">
+                        <div class="relative">
+                            <input type="text" class="text-sm bg-[#f6f6f6] pl-[30px] w-[128px] focus:w-[188px] h-[26px] pb-[2px] rounded-xl placeholder:text-sm" placeholder="Search">
+                            <i class="fa-solid fa-magnifying-glass text-sm absolute top-2 left-[10px] text-[#b8b8b8]"></i>
+                        </div>
+                        <button class="bonnton bg-button_bg text-button_text w-[59px] h-[26px] rounded-xl text-sm font-medium">
+                            Clear
+                        </button>
+                    </div>
+                    <div class="overflow-y-scroll h-[17rem] flex items-start flex-col justify-start gap-[5px] border-b-scrollable_title_border text-sm">
+                        <div class="flex items-center justify-start gap-[10px] pl-2">
+                            <input name="selectAllgroups" type="checkbox" class="check-with-label checked:bg-[#878787] scale-100">
+                            <label for="selectAllgroups" class="font-medium label-for-check cursor-pointer">Choose All</label>
+                        </div>
+                        <div class="flex items-center justify-between pr-1 w-full pl-2">
+                            <div class="flex items-center justify-start gap-[10px]">
+                                <input name="groupName1" type="checkbox" class="check-with-label checked:bg-[#878787] scale-100">
+                                <label for="groupName1" class="label-for-check cursor-pointer">001_Reserch_iPhone_High</label>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between pr-1 w-full pl-2">
+                            <div class="flex items-center justify-start gap-[10px]">
+                                <input name="groupName2" type="checkbox" class="check-with-label checked:bg-[#878787] scale-100">
+                                <label for="groupName2" class="label-for-check cursor-pointer">002_Reserch_iPhone_Research</label>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between pr-1 w-full pl-2">
+                            <div class="flex items-center justify-start gap-[10px]">
+                                <input name="groupName3" type="checkbox" class="check-with-label checked:bg-[#878787] scale-100">
+                                <label for="groupName3" class="label-for-check cursor-pointer">003_Reserch_iPhone_Broad</label>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between pr-1 w-full pl-2">
+                            <div class="flex items-center justify-start gap-[10px]">
+                                <input name="groupName4" type="checkbox" class="check-with-label checked:bg-[#878787] scale-100">
+                                <label for="groupName4" class="label-for-check cursor-pointer">004_Reserch_iPhone_Iphone</label>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between pr-1 w-full pl-2">
+                            <div class="flex items-center justify-start gap-[10px]">
+                                <input name="groupName5" type="checkbox" class="check-with-label checked:bg-[#878787] scale-100">
+                                <label for="groupName5" class="label-for-check cursor-pointer">005_Reserch_iPhone_High</label>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between pr-1 w-full pl-2">
+                            <div class="flex items-center justify-start gap-[10px]">
+                                <input name="groupName6" type="checkbox" class="check-with-label checked:bg-[#878787] scale-100">
+                                <label for="groupName6" class="label-for-check cursor-pointer">002_Reserch_iPhone_Medium</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-center justify-end gap-[3.5rem] mt-5">
+                <div class="flex items-end justify-between flex-col">
+                    <button class="w-[320px] h-[33px] text-[13px] text-white bg-add_button_bg rounded-2xl mb-3">
+                        Add Negative Keywords to 2 Campaign Groups
+                    </button>
+                    <p class="text-add_text text-[13px]">
+                        <span class="font-medium"><i class="fa-solid fa-check"></i> 6 negative keywords</span> have been added to <span class="font-medium">2 Campaign Groups</span>
+                    </p>
+                </div>
+                <div class="flex items-end justify-between flex-col">
+                    <button class="w-[291px] h-[33px] text-[13px] text-white bg-add_button_bg rounded-2xl mb-3">
+                        Add Negative Keywords to 4 Ad Groups
+                    </button>
+                    <p class="text-add_text text-[13px]">
+                        <span class="font-medium"><i class="fa-solid fa-check"></i> 6 negative keywords</span> have been added to <span class="font-medium">2 Campaign Groups</span>
+                    </p>
+                </div>
+            </div>
+            <div>
+                <p class="text-[25px] font-light mt-11 mb-3 tracking-wide"><span class="font-medium">6 negative keywords</span> have been added in total:</p>
+                <div>
+                    <div class="flex items-center justify-start gap-3 pt-2 pb-3 px-2 bg-keywords_title border-[1px] border-scrollable_title_border">
+                        <div class="text-sm font-medium text-[#4c5e6e]">
+                            3 row selected:
+                        </div>
+                        <div class="flex items-center justify-start gap-3">
+                            <button class="bg-button_bg text-button_text w-[86px] h-[28px] rounded-2xl text-sm font-medium">
+                                Archive
+                            </button>
+                            <button class="bg-button_bg text-button_text w-[72px] h-[28px] rounded-2xl text-sm font-medium">
+                                Copy
+                            </button>
+                        </div>
+                        <div class=" relative">
+                            <input type="text" class="w-[231px] bg-white h-[26px] rounded-xl pl-[30px] focus:w-[390px] placeholder:text-sm text-sm" placeholder="Search negative keyword">
+                            <i class="fa-solid fa-magnifying-glass text-sm absolute top-2 left-[10px] text-[#b8b8b8]"></i>
+                        </div>
+                    </div>
+                    <table class="w-full border-spacing-0 text-table_text">
+                        <thead>
+                            <tr class="table-head flex w-full border-[1px] border-t-0 border-scrollable_title_border min-h-[40px]">
+                                <td class="flex p-[6px] items-center justify-center border-none min-h-full text-base text-[#65707a] font-normal border-l-[1px] border-[#d0d0d0]"><input type="checkbox" class="table-checkbox checked:bg-[#878787] scale-100"></td>
+                                <td class="flex items-center justify-between w-full min-h-full help-table-wrapper table-dropdown text-base text-[#65707a] font-normal border-l-[1px] border-[#d0d0d0] max-w-[173px] pl-3">
+                                    Portfolio <span class="table-dropbtn border-none text-base z-10 relative inline-block cursor-pointer px-3">
+                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                                        <div class="help-table table-dropdown-content hidden absolute bg-white rounded-xl border-[1px] border-[#e8e8e8] w-[309px] h-[190px] left-0 z-[1]">
+                                            <div class="help-table-search p-3">
+                                                <div class="flex items-center justify-between">
+                                                    <div class="relative">
+                                                        <input type="text" class="w-[164px] pl-[30px] text-sm h-[26px] bg-[#f6f6f6] rounded-xl text-sm font-normal placeholder:text-sm placeholder:font-normal focus:w-[200px]" placeholder="Search">
+                                                        <i class="fa-solid fa-magnifying-glass absolute top-2 left-[10px] text-[#b8b8b8] text-sm"></i>
+                                                    </div>
+                                                    <p class="text-sm font-medium text-scroll_text">
+                                                        3 selected
+                                                    </p>
+                                                </div>
+                                                <div class="select-action flex items-center justify-between py-2">
+                                                    <button class="text-add_button_bg text-sm font-normal">
+                                                        Select All
+                                                    </button>
+                                                    <button class="text-add_button_bg text-sm font-normal">
+                                                        Unselect All
+                                                    </button>
+                                                </div>
+                                                <div class="select-data overflow-y-scroll h-24">
+                                                    <div class="flex items-center justify-start gap-[10px] leading-[19px]">
+                                                        <input id="portfolioBrandName1" name="portfolioBrandName1" type="checkbox" class="check-with-label checked:bg-[#878787] scale-100">
+                                                        <label for="portfolioBrandName1" class="label-for-check text-[13px] cursor-pointer">01_iPhone 7 Case</label>
+                                                    </div>
+                                                    <div class="flex items-center justify-start gap-[10px] leading-[19px]">
+                                                        <input id="portfolioBrandName2" name="portfolioBrandName2" type="checkbox" class="check-with-label checked:bg-[#878787] scale-100">
+                                                        <label for="portfolioBrandName2" class="label-for-check text-[13px] cursor-pointer">02_iPhone Brand</label>
+                                                    </div>
+                                                    <div class="flex items-center justify-start gap-[10px] leading-[19px]">
+                                                        <input id="portfolioBrandName3" name="portfolioBrandName3" type="checkbox" class="check-with-label checked:bg-[#878787] scale-100">
+                                                        <label for="portfolioBrandName3" class="label-for-check text-[13px] cursor-pointer">07_iPhone 7 - 8 wallet case</label>
+                                                    </div>
+                                                    <div class="flex items-center justify-start gap-[10px] leading-[19px]">
+                                                        <input id="portfolioBrandName4" name="portfolioBrandName4" type="checkbox" class="check-with-label checked:bg-[#878787] scale-100">
+                                                        <label for="portfolioBrandName4" class="label-for-check text-[13px] cursor-pointer">07_iPhone 8 walet case</label>
+                                                    </div>
+                                                    <div class="flex items-center justify-start gap-[10px] leading-[19px]">
+                                                        <input id="portfolioBrandName5" name="portfolioBrandName5" type="checkbox" class="check-with-label checked:bg-[#878787] scale-100">
+                                                        <label for="portfolioBrandName5" class="label-for-check text-[13px] cursor-pointer">07_iPhone 8 walet case for men</label>
+                                                    </div>
+                                                    <div class="flex items-center justify-start gap-[10px] leading-[19px]">
+                                                        <input id="portfolioBrandName6" name="portfolioBrandName6" type="checkbox" class="check-with-label checked:bg-[#878787] scale-100">
+                                                        <label for="portfolioBrandName6" class="label-for-check text-[13px] cursor-pointer">07_iPhone 8 walet case for men</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </span>
+                                </td>
+                                <td class="flex items-center justify-between w-full min-h-full help-table-wrapper table-dropdown text-base text-[#65707a] font-normal border-l-[1px] border-[#d0d0d0] max-w-[247px] pl-3">Campaing Group <span class="table-dropbtn border-none text-base z-10 relative inline-block cursor-pointer px-3">
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                    <div class="help-table table-dropdown-content hidden absolute bg-white rounded-xl border-[1px] border-[#e8e8e8] w-[309px] h-[190px] left-0 z-[1]">
+                                        <div class="help-table-search p-3">
+                                            <div class="flex items-center justify-between">
+                                                <div class="relative">
+                                                    <input type="text" class="text-sm w-[164px] pl-[30px] text-sm h-[26px] bg-[#f6f6f6] rounded-xl font-normal placeholder:text-sm placeholder:font-normal focus:w-[200px]" placeholder="Search">
+                                                    <i class="fa-solid fa-magnifying-glass absolute top-2 left-[10px] text-[#b8b8b8] text-sm"></i>
+                                                </div>
+                                                <p class="text-sm font-medium text-scroll_text">
+                                                    3 selected
+                                                </p>
+                                            </div>
+                                            <div class="select-action flex items-center justify-between py-2">
+                                                <button class="text-add_button_bg text-sm font-normal">
+                                                    Select All
+                                                </button>
+                                                <button class="text-add_button_bg text-sm font-normal">
+                                                    Unselect All
+                                                </button>
+                                            </div>
+                                            <div class="select-data overflow-y-scroll h-24">
+                                                <div class="flex items-center justify-start gap-[10px] leading-[19px]">
+                                                    <input id="campaingBrandName1" name="campaingBrandName1" type="checkbox" class="check-with-label">
+                                                    <label for="campaingBrandName1" class="label-for-check text-[13px] cursor-pointer">01_iPhone 7 Case</label>
+                                                </div>
+                                                <div class="flex items-center justify-start gap-[10px] leading-[19px]">
+                                                    <input id="campaingBrandName2" name="campaingBrandName2" type="checkbox" class="check-with-label">
+                                                    <label for="campaingBrandName2" class="label-for-check text-[13px] cursor-pointer">02_iPhone Brand</label>
+                                                </div>
+                                                <div class="flex items-center justify-start gap-[10px] leading-[19px]">
+                                                    <input id="campaingBrandName3" name="campaingBrandName3" type="checkbox" class="check-with-label">
+                                                    <label for="campaingBrandName3" class="label-for-check text-[13px] cursor-pointer">07_iPhone 7 - 8 wallet case</label>
+                                                </div>
+                                                <div class="flex items-center justify-start gap-[10px] leading-[19px]">
+                                                    <input id="campaingBrandName4" name="campaingBrandName4" type="checkbox" class="check-with-label">
+                                                    <label for="campaingBrandName4" class="label-for-check text-[13px] cursor-pointer">07_iPhone 8 walet case</label>
+                                                </div>
+                                                <div class="flex items-center justify-start gap-[10px] leading-[19px]">
+                                                    <input id="campaingBrandName5" name="campaingBrandName5" type="checkbox" class="check-with-label">
+                                                    <label for="campaingBrandName5" class="label-for-check text-[13px] cursor-pointer">07_iPhone 8 walet case for men</label>
+                                                </div>
+                                                <div class="flex items-center justify-start gap-[10px] leading-[19px]">
+                                                    <input id="campaingBrandName6" name="campaingBrandName6" type="checkbox" class="check-with-label">
+                                                    <label for="campaingBrandName6" class="label-for-check text-[13px] cursor-pointer">07_iPhone 8 walet case for men</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </span></td>
+                                <td class="flex items-center justify-between w-full min-h-full help-table-wrapper table-dropdown text-base text-[#65707a] font-normal border-l-[1px] border-[#d0d0d0] max-w-[268px] pl-3">Add Group <span class="table-dropbtn border-none text-base z-10 relative inline-block cursor-pointer px-3">
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                    <div class="help-table table-dropdown-content hidden absolute bg-white rounded-xl border-[1px] border-[#e8e8e8] w-[309px] h-[190px] left-0 z-[1]">
+                                        <div class="help-table-search p-3">
+                                            <div class="flex items-center justify-between">
+                                                <div class="relative">
+                                                    <input type="text" class="text-sm w-[164px] pl-[30px] text-sm h-[26px] bg-[#f6f6f6] rounded-xl font-normal placeholder:text-sm placeholder:font-normal focus:w-[200px]" placeholder="Search">
+                                                    <i class="fa-solid fa-magnifying-glass absolute top-2 left-[10px] text-[#b8b8b8] text-sm"></i>
+                                                </div>
+                                                <p class="text-sm font-medium text-scroll_text">
+                                                    3 selected
+                                                </p>
+                                            </div>
+                                            <div class="select-action flex items-center justify-between py-2">
+                                                <button class="text-add_button_bg text-sm font-normal">
+                                                    Select All
+                                                </button>
+                                                <button class="text-add_button_bg text-sm font-normal">
+                                                    Unselect All
+                                                </button>
+                                            </div>
+                                            <div class="select-data overflow-y-scroll h-24">
+                                                <div class="flex items-center justify-start gap-[10px] leading-[19px]">
+                                                    <input id="addBrandName1" name="addBrandName1" type="checkbox" class="check-with-label checked:bg-[#878787] scale-100">
+                                                    <label for="addBrandName1" class="label-for-check text-[13px] cursor-pointer">01_iPhone 7 Case</label>
+                                                </div>
+                                                <div class="flex items-center justify-start gap-[10px] leading-[19px]">
+                                                    <input id="addBrandName2" name="addBrandName2" type="checkbox" class="check-with-label checked:bg-[#878787] scale-100">
+                                                    <label for="addBrandName2" class="label-for-check text-[13px] cursor-pointer">02_iPhone Brand</label>
+                                                </div>
+                                                <div class="flex items-center justify-start gap-[10px] leading-[19px]">
+                                                    <input id="addBrandName3" name="addBrandName3" type="checkbox" class="check-with-label checked:bg-[#878787] scale-100">
+                                                    <label for="addBrandName3" class="label-for-check text-[13px] cursor-pointer">07_iPhone 7 - 8 wallet case</label>
+                                                </div>
+                                                <div class="flex items-center justify-start gap-[10px] leading-[19px]">
+                                                    <input id="addBrandName4" name="addBrandName4" type="checkbox" class="check-with-label checked:bg-[#878787] scale-100">
+                                                    <label for="addBrandName4" class="label-for-check text-[13px] cursor-pointer">07_iPhone 8 walet case</label>
+                                                </div>
+                                                <div class="flex items-center justify-start gap-[10px] leading-[19px]">
+                                                    <input id="addBrandName5" name="addBrandName5" type="checkbox" class="check-with-label checked:bg-[#878787] scale-100">
+                                                    <label for="addBrandName5" class="label-for-check text-[13px] cursor-pointer">07_iPhone 8 walet case for men</label>
+                                                </div>
+                                                <div class="flex items-center justify-start gap-[10px] leading-[19px]">
+                                                    <input id="addBrandName6" name="addBrandName6" type="checkbox" class="check-with-label checked:bg-[#878787] scale-100">
+                                                    <label for="addBrandName6" class="label-for-check text-[13px] cursor-pointer">07_iPhone 8 walet case for men</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </span></td>
+                                <td class="flex items-center justify-between w-full min-h-full help-table-wrapper table-dropdown text-base text-[#65707a] font-normal border-l-[1px] border-[#d0d0d0] max-w-[295px] pl-3">Negative Keyword <span class="table-dropbtn border-none text-base z-10 relative inline-block cursor-pointer px-3">
+                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                                        <div class="help-table table-dropdown-content hidden absolute bg-white rounded-xl border-[1px] border-[#e8e8e8] w-[309px] h-[190px] left-0 z-[1]">
+                                            <div class="help-table-search p-3">
+                                                <div class="flex items-center justify-between">
+                                                    <div class=" relative">
+                                                        <input type="text" class="text-sm w-[164px] pl-[30px] text-sm h-[26px] bg-[#f6f6f6] rounded-xl font-normal placeholder:text-sm placeholder:font-normal focus:w-[200px]" placeholder="Search">
+                                                        <i class="fa-solid fa-magnifying-glass absolute top-2 left-[10px] text-[#b8b8b8] text-sm"></i>
+                                                    </div>
+                                                    <p class="text-sm font-medium text-scroll_text">
+                                                        3 selected
+                                                    </p>
+                                                </div>
+                                                <div class="select-action flex items-center justify-between py-2">
+                                                    <button class="text-add_button_bg text-sm font-normal">
+                                                        Select All
+                                                    </button>
+                                                    <button class="text-add_button_bg text-sm font-normal">
+                                                        Unselect All
+                                                    </button>
+                                                </div>
+                                                <div class="select-data overflow-y-scroll h-24">
+                                                    <div class="flex items-center justify-start gap-[10px] leading-[19px]">
+                                                        <input id="keywordBrandName1" name="keywordBrandName1" type="checkbox" class="check-with-label checked:bg-[#878787] scale-100">
+                                                        <label for="keywordBrandName1" class="label-for-check text-[13px] cursor-pointer">01_iPhone 7 Case</label>
+                                                    </div>
+                                                    <div class="flex items-center justify-start gap-[10px] leading-[19px]">
+                                                        <input id="keywordBrandName2" name="keywordBrandName2" type="checkbox" class="check-with-label checked:bg-[#878787] scale-100">
+                                                        <label for="keywordBrandName2" class="label-for-check text-[13px] cursor-pointer">02_iPhone Brand</label>
+                                                    </div>
+                                                    <div class="flex items-center justify-start gap-[10px] leading-[19px]">
+                                                        <input id="keywordBrandName3" name="keywordBrandName3" type="checkbox" class="check-with-label checked:bg-[#878787] scale-100">
+                                                        <label for="keywordBrandName3" class="label-for-check text-[13px] cursor-pointer">07_iPhone 7 - 8 wallet case</label>
+                                                    </div>
+                                                    <div class="flex items-center justify-start gap-[10px] leading-[19px]">
+                                                        <input id="keywordBrandName4" name="keywordBrandName4" type="checkbox" class="check-with-label checked:bg-[#878787] scale-100">
+                                                        <label for="keywordBrandName4" class="label-for-check text-[13px] cursor-pointer">07_iPhone 8 walet case</label>
+                                                    </div>
+                                                    <div class="flex items-center justify-start gap-[10px] leading-[19px]">
+                                                        <input id="keywordBrandName5" name="keywordBrandName5" type="checkbox" class="check-with-label checked:bg-[#878787] scale-100">
+                                                        <label for="keywordBrandName5" class="label-for-check text-[13px] cursor-pointer">07_iPhone 8 walet case for men</label>
+                                                    </div>
+                                                    <div class="flex items-center justify-start gap-[10px] leading-[19px]">
+                                                        <input id="keywordBrandName6" name="keywordBrandName6" type="checkbox" class="check-with-label checked:bg-[#878787] scale-100">
+                                                        <label for="keywordBrandName6" class="label-for-check text-[13px] cursor-pointer">07_iPhone 8 walet case for men</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </span></td>
+                                <td class="flex items-center justify-between w-full min-h-full help-table-wrapper table-dropdown match-type-help text-base text-[#65707a] font-normal border-l-[1px] border-[#d0d0d0] max-w-[187px] pl-3"><span>
+                                    Match Type <span class="hover-link relative">
+                                        <i class="fa-solid fa-circle-question text-sm"></i>
+                                        <span class="match-type-toaster hidden p-1 delay-300 transition-all font-medium bg-white after:contents-[''] after:w-3 after:h-3 after:border-r-[1px] after:border-t-[1px] after:rotate-[-45deg] after:z-[6] after:top-[-7px] after:right-[48%] after:absolute after:inline-block after:bg-white">
+                                            Provide your fulfillment costs and see real-time cost comparisons between different fulfillment methods
+                                        </span>
+                                    </span>
+                                </span><span class="table-dropbtn border-none text-base z-10 relative inline-block cursor-pointer px-3">
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                    <div class="help-table table-dropdown-content hidden absolute bg-white rounded-xl border-[1px] border-[#e8e8e8] w-[309px] h-[190px] right-0 z-[1]">
+                                        <div class="help-table-search p-3">
+                                            <div class="flex items-center justify-between">
+                                                <div class="relative">
+                                                    <input type="text" class="text-sm w-[164px] pl-[30px] text-sm h-[26px] bg-[#f6f6f6] rounded-xl font-normal placeholder:text-sm placeholder:font-normal focus:w-[200px]" placeholder="Search">
+                                                    <i class="fa-solid fa-magnifying-glass absolute top-2 left-[10px] text-[#b8b8b8] text-sm"></i>
+                                                </div>
+                                                <p class="text-sm font-medium text-scroll_text">
+                                                    3 selected
+                                                </p>
+                                            </div>
+                                            <div class="select-action flex items-center justify-between py-2">
+                                                <button class="text-add_button_bg text-sm font-normal">
+                                                    Select All
+                                                </button>
+                                                <button class="text-add_button_bg text-sm font-normal">
+                                                    Unselect All
+                                                </button>
+                                            </div>
+                                            <div class="select-data overflow-y-scroll h-24">
+                                                <div class="flex items-center justify-start gap-[10px] leading-[19px]">
+                                                    <input id="matchTypeBrandName1" name="matchTypeBrandName1" type="checkbox" class="check-with-label checked:bg-[#878787] scale-100">
+                                                    <label for="matchTypeBrandName1" class="label-for-check text-[13px] cursor-pointer">01_iPhone 7 Case</label>
+                                                </div>
+                                                <div class="flex items-center justify-start gap-[10px] leading-[19px]">
+                                                    <input id="matchTypeBrandName2" name="matchTypeBrandName2" type="checkbox" class="check-with-label checked:bg-[#878787] scale-100">
+                                                    <label for="matchTypeBrandName2" class="label-for-check text-[13px] cursor-pointer">02_iPhone Brand</label>
+                                                </div>
+                                                <div class="flex items-center justify-start gap-[10px] leading-[19px]">
+                                                    <input id="matchTypeBrandName3" name="matchTypeBrandName3" type="checkbox" class="check-with-label checked:bg-[#878787] scale-100">
+                                                    <label for="matchTypeBrandName3" class="label-for-check text-[13px] cursor-pointer">07_iPhone 7 - 8 wallet case</label>
+                                                </div>
+                                                <div class="flex items-center justify-start gap-[10px] leading-[19px]">
+                                                    <input id="matchTypeBrandName4" name="matchTypeBrandName4" type="checkbox" class="check-with-label checked:bg-[#878787] scale-100">
+                                                    <label for="matchTypeBrandName4" class="label-for-check text-[13px] cursor-pointer">07_iPhone 8 walet case</label>
+                                                </div>
+                                                <div class="flex items-center justify-start gap-[10px] leading-[19px]">
+                                                    <input id="matchTypeBrandName5" id="matchTypeBrandName5" name="matchTypeBrandName5" type="checkbox" class="check-with-label checked:bg-[#878787] scale-100">
+                                                    <label for="matchTypeBrandName5" class="label-for-check text-[13px] cursor-pointer">07_iPhone 8 walet case for men</label>
+                                                </div>
+                                                <div class="flex items-center justify-start gap-[10px] leading-[19px]">
+                                                    <input id="matchTypeBrandName6" name="matchTypeBrandName6" type="checkbox" class="check-with-label checked:bg-[#878787] scale-100">
+                                                    <label for="matchTypeBrandName6" class="label-for-check text-[13px] cursor-pointer">07_iPhone 8 walet case for men</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </span></td>
+                                <td class="w-40 min-h-full border-none pl-[42px] large:pl-[38px] max-w-[36px]"></td>
+                            </tr>
+                        </thead>
+                        <tbody class="overflow-y-scroll border-r-[1px] border-scrollable_title_border" style="max-height: 525px; display:block; overflow-y: scroll;">
+                            <tr class="table-body border-t-0 flex w-full border-l-[1px] border-b-[1px] border-scrollable_title_border bg-table_bg min-h-[40px]">
+                                <td class="flex p-[6px] items-center justify-center border-none min-h-full border-l-[1px] border-[#d0d0d0] text-sm">
+                                    <input type="checkbox" class="table-checkbox checked:bg-[#878787] scale-100">
+                                </td>
+                                <td class="flex items-center justify-start w-full min-h-full border-l-[1px] border-[#d0d0d0] text-sm text-[#37434f] overflow-x-hidden max-w-[173px] pl-3">
+                                    01_iPhone 7 case
+                                </td>
+                                <td class="flex items-center justify-start w-full min-h-full border-l-[1px] border-[#d0d0d0] text-sm text-[#37434f] overflow-x-hidden max-w-[247px] pl-3">
+                                    001_Research_iPhone_High
+                                </td>
+                                <td class="flex items-center justify-start w-full min-h-full border-l-[1px] border-[#d0d0d0] text-sm text-[#37434f] overflow-x-hidden max-w-[268px] pl-3">
+                                    001_Research_iPhone_Research
+                                </td>
+                                <td class="flex items-center justify-start w-full min-h-full font-semibold border-l-[1px] border-[#d0d0d0] text-sm text-[#65707a] overflow-x-hidden max-w-[295px] pl-3">
+                                    iphone 7 wallet case for women and  woman and detachable
+                                </td>
+                                <td class="flex items-center justify-start w-full min-h-full font-semibold border-l-[1px] border-[#d0d0d0] text-sm text-[#37434f] overflow-x-hidden max-w-[187px] pl-3">
+                                    Negative exact
+                                </td>
+                                <td class="w-40 py-3 min-h-full flex items-center justify-center border-l-[1px] border-[#d0d0d0] text-xs text-[#37434f] max-w-[36px]">
+                                    <i class="fa-sharp fa-solid fa-x cursor-pointer pl-0"></i>
+                                </td>
+                            </tr>
+                            <tr class="table-body flex w-full border-l-[1px] border-b-[1px] border-scrollable_title_border bg-table_bg">
+                                <td class="flex p-[6px] items-center justify-center border-none min-h-full border-l-[1px] border-[#d0d0d0] text-sm">
+                                    <input type="checkbox" class="table-checkbox checked:bg-[#878787] scale-100">
+                                </td>
+                                <td class="flex items-center justify-start w-full min-h-full border-l-[1px] border-[#d0d0d0] text-sm text-[#37434f] overflow-x-hidden max-w-[173px] pl-3">
+                                    01_iPhone 7 case
+                                </td>
+                                <td class="flex items-center justify-start w-full min-h-full border-l-[1px] border-[#d0d0d0] text-sm text-[#37434f] overflow-x-hidden max-w-[247px] pl-3">
+                                    001_Research_iPhone_High
+                                </td>
+                                <td class="flex items-center justify-start w-full min-h-full border-l-[1px] border-[#d0d0d0] text-sm text-[#37434f] overflow-x-hidden max-w-[268px] pl-3">
+                                    001_Research_iPhone_Research
+                                </td>
+                                <td class="flex items-center justify-start w-full min-h-full font-semibold border-l-[1px] border-[#d0d0d0] text-sm text-[#65707a] overflow-x-hidden max-w-[295px] pl-3">
+                                    iphone 8 wallet case
+                                </td>
+                                <td class="flex items-center justify-start w-full min-h-full font-semibold border-l-[1px] border-[#d0d0d0] text-sm text-[#37434f] overflow-x-hidden max-w-[187px] pl-3">
+                                    Negative phrase
+                                </td>
+                                <td class="w-40 py-3 min-h-full flex items-center justify-center border-l-[1px] border-[#d0d0d0] text-sm text-[#37434f] max-w-[36px]">
+                                    <i class="fa-sharp fa-solid fa-x cursor-pointer pl-0"></i>
+                                </td>
+                            </tr>
+                            <tr class="table-body flex w-full border-l-[1px] border-b-[1px] border-scrollable_title_border bg-table_bg">
+                                <td class="flex p-[6px] items-center justify-center border-none min-h-full border-l-[1px] border-[#d0d0d0] text-sm">
+                                    <input type="checkbox" class="table-checkbox checked:bg-[#878787] scale-100">
+                                </td>
+                                <td class="flex items-center justify-start w-full min-h-full border-l-[1px] border-[#d0d0d0] text-sm text-[#37434f] overflow-x-hidden max-w-[173px] pl-3">
+                                    01_iPhone 7 case
+                                </td>
+                                <td class="flex items-center justify-start w-full min-h-full border-l-[1px] border-[#d0d0d0] text-sm text-[#37434f] overflow-x-hidden max-w-[247px] pl-3">
+                                    001_Research_iPhone_High
+                                </td>
+                                <td class="flex items-center justify-start w-full min-h-full border-l-[1px] border-[#d0d0d0] text-sm text-[#37434f] overflow-x-hidden max-w-[268px] pl-3">
+                                    001_Research_iPhone_Research
+                                </td>
+                                <td class="flex items-center justify-start w-full min-h-full font-semibold border-l-[1px] border-[#d0d0d0] text-sm text-[#65707a] overflow-x-hidden max-w-[295px] pl-3">
+                                    iphone 7 and 8 wallet case
+                                </td>
+                                <td class="flex items-center justify-start w-full min-h-full font-semibold border-l-[1px] border-[#d0d0d0] text-sm text-[#37434f] overflow-x-hidden max-w-[187px] pl-3">
+                                    Negative exact
+                                </td>
+                                <td class="w-40 py-3 min-h-full flex items-center justify-center border-l-[1px] border-[#d0d0d0] text-sm max-w-[36px]">
+                                    <i class="fa-sharp fa-solid fa-x cursor-pointer pl-0"></i>
+                                </td>
+                            </tr>
+                            <tr class="table-body flex w-full border-l-[1px] border-b-[1px] border-scrollable_title_border">
+                                <td class="flex p-[6px] items-center justify-center border-none min-h-full border-l-[1px] border-[#d0d0d0] text-sm">
+                                    <input type="checkbox" class="table-checkbox checked:bg-[#878787] scale-100">
+                                </td>
+                                <td class="flex items-center justify-start w-full min-h-full border-l-[1px] border-[#d0d0d0] text-sm text-[#37434f] overflow-x-hidden max-w-[173px] pl-3">
+                                    01_iPhone 7 case
+                                </td>
+                                <td class="flex items-center justify-start w-full min-h-full border-l-[1px] border-[#d0d0d0] text-sm text-[#37434f] overflow-x-hidden max-w-[247px] pl-3">
+                                    001_Research_iPhone_High
+                                </td>
+                                <td class="flex items-center justify-start w-full overflow-x-hidden min-h-full border-l-[1px] border-[#d0d0d0] text-sm text-[#37434f] overflow-x-hidden max-w-[268px] pl-3">
+                                    &nbsp;
+                                </td>
+                                <td class="flex items-center justify-start w-full min-h-full font-semibold border-l-[1px] border-[#d0d0d0] text-sm text-[#65707a] overflow-x-hidden max-w-[295px] pl-3">
+                                    iphone 8 wallet case for birthday
+                                </td>
+                                <td class="flex items-center justify-start w-full min-h-full font-semibold border-l-[1px] border-[#d0d0d0] text-sm text-[#37434f] overflow-x-hidden max-w-[187px] pl-3">
+                                    Negative exact
+                                </td>
+                                <td class="w-40 py-3 min-h-full flex items-center justify-center border-l-[1px] border-[#d0d0d0] text-sm text-[#37434f] max-w-[36px]">
+                                    <i class="fa-sharp fa-solid fa-x cursor-pointer pl-0"></i>
+                                </td>
+                            </tr>
+                            <tr class="table-body flex w-full border-l-[1px] border-b-[1px] border-scrollable_title_border">
+                                <td class="flex p-[6px] items-center justify-center border-none min-h-full border-l-[1px] border-[#d0d0d0] text-sm">
+                                    <input type="checkbox" class="table-checkbox checked:bg-[#878787] scale-100">
+                                </td>
+                                <td class="flex items-center justify-start w-full min-h-full border-l-[1px] border-[#d0d0d0] text-sm text-[#37434f] overflow-x-hidden max-w-[173px] pl-3">
+                                    01_iPhone 7 case
+                                </td>
+                                <td class="flex items-center justify-start w-full min-h-full border-l-[1px] border-[#d0d0d0] text-sm text-[#37434f] overflow-x-hidden max-w-[247px] pl-3">
+                                    001_Research_iPhone_High
+                                </td>
+                                <td class="flex items-center justify-start w-full overflow-x-hidden min-h-full border-l-[1px] border-[#d0d0d0] text-sm text-[#37434f] overflow-x-hidden max-w-[268px] pl-3">
+                                    &nbsp;
+                                </td>
+                                <td class="flex items-center justify-start w-full min-h-full font-semibold border-l-[1px] border-[#d0d0d0] text-sm text-[#65707a] overflow-x-hidden max-w-[295px] pl-3">
+                                    iphone 7 wallet case for women 
+                                </td>
+                                <td class="flex items-center justify-start w-full min-h-full  font-semibold border-l-[1px] border-[#d0d0d0] text-sm text-[#37434f] overflow-x-hidden max-w-[187px] pl-3">
+                                    Negative exact
+                                </td>
+                                <td class="w-40 py-3 min-h-full flex items-center justify-center border-l-[1px] border-[#d0d0d0] text-sm max-w-[36px]">
+                                    <i class="fa-sharp fa-solid fa-x cursor-pointer pl-0"></i>
+                                </td>
+                            </tr>
+                            <tr class="table-body flex w-full border-l-[1px] border-b-[1px] border-scrollable_title_border">
+                                <td class="flex p-[6px] items-center justify-center border-none min-h-full border-l-[1px] border-[#d0d0d0] text-sm">
+                                    <input type="checkbox" class="table-checkbox checked:bg-[#878787] scale-100">
+                                </td>
+                                <td class="flex items-center justify-start w-full min-h-full border-l-[1px] border-[#d0d0d0] text-sm text-[#37434f] overflow-x-hidden max-w-[173px] pl-3">
+                                    01_iPhone 7 case
+                                </td>
+                                <td class="flex items-center justify-start w-full min-h-full border-l-[1px] border-[#d0d0d0] text-sm text-[#37434f] overflow-x-hidden max-w-[247px] pl-3">
+                                    001_Research_iPhone_High
+                                </td>
+                                <td class="flex items-center justify-start w-full overflow-x-hidden min-h-full border-l-[1px] border-[#d0d0d0] text-sm text-[#37434f] overflow-x-hidden max-w-[268px] pl-3">
+                                    &nbsp;
+                                </td>
+                                <td class="flex items-center justify-start w-full min-h-full font-semibold border-l-[1px] border-[#d0d0d0] text-sm text-[#65707a] overflow-x-hidden max-w-[295px] pl-3">
+                                    7 wallet case men
+                                </td>
+                                <td class="flex items-center justify-start w-full min-h-full font-semibold border-l-[1px] border-[#d0d0d0] text-smtext-[#37434f] overflow-x-hidden max-w-[187px] pl-3">
+                                    Negative exact
+                                </td>
+                                <td class="w-40 py-3 min-h-full flex items-center justify-center border-l-[1px] border-[#d0d0d0] text-sm max-w-[36px]">
+                                    <i class="fa-sharp fa-solid fa-x cursor-pointer pl-0"></i>
+                                </td>
+                            </tr>
+                            <tr class="table-body flex w-full border-l-[1px] border-b-[1px] border-scrollable_title_border">
+                                <td class="flex p-[6px] items-center justify-center border-none min-h-full border-l-[1px] border-[#d0d0d0] text-sm">
+                                    <input type="checkbox" class="table-checkbox checked:bg-[#878787] scale-100">
+                                </td>
+                                <td class="flex items-center justify-start w-full min-h-full border-l-[1px] border-[#d0d0d0] text-sm text-[#37434f] overflow-x-hidden max-w-[173px] pl-3">
+                                    01_iPhone 7 case
+                                </td>
+                                <td class="flex items-center justify-start w-full min-h-full border-l-[1px] border-[#d0d0d0] text-sm text-[#37434f] overflow-x-hidden max-w-[247px] pl-3">
+                                    001_Research_iPhone_High
+                                </td>
+                                <td class="flex items-center justify-start w-full overflow-x-hidden min-h-full border-l-[1px] border-[#d0d0d0] text-sm max-w-[268px] pl-3">
+                                    &nbsp;
+                                </td>
+                                <td class="flex items-center justify-start w-full min-h-full font-semibold border-l-[1px] border-[#d0d0d0] text-sm text-[#65707a] overflow-x-hidden max-w-[295px] pl-3">
+                                    iphone 7 magnetic case
+                                </td>
+                                <td class="flex items-center justify-start w-full min-h-full font-semibold border-l-[1px] border-[#d0d0d0] text-sm text-[#37434f] overflow-x-hidden max-w-[187px] pl-3">
+                                    Negative exact
+                                </td>
+                                <td class="w-40 py-3 min-h-full flex items-center justify-center border-l-[1px] border-[#d0d0d0] text-sm max-w-[36px]">
+                                    <i class="fa-sharp fa-solid fa-x cursor-pointer pl-0"></i>
+                                </td>
+                            </tr>
+                            <tr class="table-body flex w-full border-l-[1px] border-b-[1px] border-scrollable_title_border">
+                                <td class="flex p-[6px] items-center justify-center border-none min-h-full border-l-[1px] border-[#d0d0d0] text-sm">
+                                    <input type="checkbox" class="table-checkbox checked:bg-[#878787] scale-100">
+                                </td>
+                                <td class="flex items-center justify-start w-full min-h-full border-l-[1px] border-[#d0d0d0] text-sm text-[#37434f] overflow-x-hidden max-w-[173px] pl-3">
+                                    01_iPhone 7 case
+                                </td>
+                                <td class="flex items-center justify-start w-full min-h-full border-l-[1px] border-[#d0d0d0] text-sm text-[#37434f] overflow-x-hidden max-w-[247px] pl-3">
+                                    001_Research_iPhone_High
+                                </td>
+                                <td class="flex items-center justify-start w-full overflow-x-hidden min-h-full border-l-[1px] border-[#d0d0d0] text-sm text-[#37434f] overflow-x-hidden max-w-[268px] pl-3">
+                                    &nbsp;
+                                </td>
+                                <td class="flex items-center justify-start w-full min-h-full font-semibold border-l-[1px] border-[#d0d0d0] text-sm text-[#65707a] overflow-x-hidden max-w-[295px] pl-3">
+                                    iphone 7 detachable case
+                                </td>
+                                <td class="flex items-center justify-start w-full min-h-full font-semibold border-l-[1px] border-[#d0d0d0] text-sm text-[#37434f] overflow-x-hidden max-w-[187px] pl-3">
+                                    Negative phrase
+                                </td>
+                                <td class="w-40 py-3 min-h-full flex items-center justify-center border-l-[1px] border-[#d0d0d0] text-sm max-w-[36px]">
+                                    <i class="fa-sharp fa-solid fa-x cursor-pointer pl-0"></i>
+                                </td>
+                            </tr>
+                            <tr class="table-body flex w-full border-l-[1px] border-b-[1px] border-scrollable_title_border">
+                                <td class="flex p-[6px] items-center justify-center border-none min-h-full border-l-[1px] border-[#d0d0d0] text-sm">
+                                    <input type="checkbox" class="table-checkbox checked:bg-[#878787] scale-100">
+                                </td>
+                                <td class="flex items-center justify-start w-full min-h-full border-l-[1px] border-[#d0d0d0] text-sm text-[#37434f] overflow-x-hidden max-w-[173px] pl-3">
+                                    01_iPhone 7 case
+                                </td>
+                                <td class="flex items-center justify-start w-full min-h-full border-l-[1px] border-[#d0d0d0] text-sm text-[#37434f] overflow-x-hidden max-w-[247px] pl-3">
+                                    001_Research_iPhone_High
+                                </td>
+                                <td class="flex items-center justify-start w-full overflow-x-hidden min-h-full border-l-[1px] border-[#d0d0d0] text-sm text-[#37434f] overflow-x-hidden max-w-[268px] pl-3">
+                                    &nbsp;
+                                </td>
+                                <td class="flex items-center justify-start w-full min-h-full font-semibold border-l-[1px] border-[#d0d0d0] text-sm text-[#65707a] overflow-x-hidden max-w-[295px] pl-3">
+                                    iphone 8 black case
+                                </td>
+                                <td class="flex items-center justify-start w-full min-h-full font-semibold border-l-[1px] border-[#d0d0d0] text-sm text-[#37434f] overflow-x-hidden max-w-[187px] pl-3">
+                                    Negative exact
+                                </td>
+                                <td class="w-40 py-3 min-h-full flex items-center justify-center border-l-[1px] border-[#d0d0d0] text-sm max-w-[36px]">
+                                    <i class="fa-sharp fa-solid fa-x cursor-pointer pl-0"></i>
+                                </td>
+                            </tr>
+                            <tr class="table-body flex w-full border-l-[1px] border-b-[1px] border-scrollable_title_border">
+                                <td class="flex p-[6px] items-center justify-center border-none min-h-full border-l-[1px] border-[#d0d0d0] text-sm">
+                                    <input type="checkbox" class="table-checkbox checked:bg-[#878787] scale-100">
+                                </td>
+                                <td class="flex items-center justify-start w-full min-h-full border-l-[1px] border-[#d0d0d0] text-sm text-[#37434f] overflow-x-hidden max-w-[173px] pl-3">
+                                    01_iPhone 7 case
+                                </td>
+                                <td class="flex items-center justify-start w-full min-h-full border-l-[1px] border-[#d0d0d0] text-sm text-[#37434f] overflow-x-hidden max-w-[247px] pl-3">
+                                    001_Research_iPhone_High
+                                </td>
+                                <td class="flex items-center justify-start w-full overflow-x-hidden min-h-full border-l-[1px] border-[#d0d0d0] text-sm text-[#37434f] overflow-x-hidden max-w-[268px] pl-3">
+                                    &nbsp;
+                                </td>
+                                <td class="flex items-center justify-start w-full min-h-full font-semibold border-l-[1px] border-[#d0d0d0] text-sm text-[#65707a] overflow-x-hidden max-w-[295px] pl-3">
+                                    iphone 10 case
+                                </td>
+                                <td class="flex items-center justify-start w-full min-h-full font-semibold border-l-[1px] border-[#d0d0d0] text-sm text-[#37434f] overflow-x-hidden max-w-[187px] pl-3">
+                                    Negative exact
+                                </td>
+                                <td class="w-40 py-3 min-h-full flex items-center justify-center border-l-[1px] border-[#d0d0d0] text-sm max-w-[36px]">
+                                    <i class="fa-sharp fa-solid fa-x cursor-pointer pl-0"></i>
+                                </td>
+                            </tr>
+                            <tr class="table-body flex w-full border-l-[1px] border-b-[1px] border-scrollable_title_border">
+                                <td class="flex p-[6px] items-center justify-center border-none min-h-full border-l-[1px] border-[#d0d0d0] text-sm">
+                                    <input type="checkbox" class="table-checkbox checked:bg-[#878787] scale-100">
+                                </td>
+                                <td class="flex items-center justify-start w-full min-h-full border-l-[1px] border-[#d0d0d0] text-sm text-[#37434f] overflow-x-hidden max-w-[173px] pl-3">
+                                    01_iPhone 7 case
+                                </td>
+                                <td class="flex items-center justify-start w-full min-h-full border-l-[1px] border-[#d0d0d0] text-sm text-[#37434f] overflow-x-hidden max-w-[247px] pl-3">
+                                    001_Research_iPhone_High
+                                </td>
+                                <td class="flex items-center justify-start w-full overflow-x-hidden min-h-full border-l-[1px] border-[#d0d0d0] text-sm text-[#37434f] overflow-x-hidden max-w-[268px] pl-3">
+                                    &nbsp;
+                                </td>
+                                <td class="flex items-center justify-start w-full min-h-full font-semibold border-l-[1px] border-[#d0d0d0] text-sm text-[#65707a] overflow-x-hidden max-w-[295px] pl-3">
+                                    iphone 8 case
+                                </td>
+                                <td class="flex items-center justify-start w-full min-h-full font-semibold border-l-[1px] border-[#d0d0d0] text-sm text-[#37434f] overflow-x-hidden max-w-[187px] pl-3">
+                                    Negative exact
+                                </td>
+                                <td class="w-40 py-3 min-h-full flex items-center justify-center border-l-[1px] border-[#d0d0d0] text-sm max-w-[36px]">
+                                    <i class="fa-sharp fa-solid fa-x cursor-pointer pl-0"></i>
+                                </td>
+                            </tr>
+                            <tr class="table-body flex w-full border-l-[1px] border-b-[1px] border-scrollable_title_border">
+                                <td class="flex p-[6px] items-center justify-center border-none min-h-full border-l-[1px] border-[#d0d0d0] text-sm">
+                                    <input type="checkbox" class="table-checkbox checked:bg-[#878787] scale-100">
+                                </td>
+                                <td class="flex items-center justify-start w-full min-h-full border-l-[1px] border-[#d0d0d0] text-sm text-[#37434f] overflow-x-hidden max-w-[173px] pl-3">
+                                    01_iPhone 7 case
+                                </td>
+                                <td class="flex items-center justify-start w-full min-h-full border-l-[1px] border-[#d0d0d0] text-sm text-[#37434f] overflow-x-hidden max-w-[247px] pl-3">
+                                    001_Research_iPhone_High
+                                </td>
+                                <td class="flex items-center justify-start w-full overflow-x-hidden min-h-full border-l-[1px] border-[#d0d0d0] text-sm text-[#37434f] overflow-x-hidden max-w-[268px] pl-3">
+                                    &nbsp;
+                                </td>
+                                <td class="flex items-center justify-start w-full min-h-full font-semibold border-l-[1px] border-[#d0d0d0] text-sm text-[#65707a] overflow-x-hidden max-w-[295px] pl-3">
+                                    iphone 7 case 
+                                </td>
+                                <td class="flex items-center justify-start w-full min-h-full font-semibold border-l-[1px] border-[#d0d0d0] text-sm text-[#37434f] overflow-x-hidden max-w-[187px] pl-3">
+                                    Negative exact
+                                </td>
+                                <td class="w-40 py-3 min-h-full flex items-center justify-center border-l-[1px] border-[#d0d0d0] text-sm max-w-[36px]">
+                                    <i class="fa-sharp fa-solid fa-x cursor-pointer pl-0"></i>
+                                </td>
+                            </tr>
+                            <tr class="table-body flex w-full border-l-[1px] border-b-[1px] border-scrollable_title_border">
+                                <td class="flex p-[6px] items-center justify-center border-none min-h-full border-l-[1px] border-[#d0d0d0] text-sm">
+                                    <input type="checkbox" class="table-checkbox checked:bg-[#878787] scale-100">
+                                </td>
+                                <td class="flex items-center justify-start w-full min-h-full border-l-[1px] border-[#d0d0d0] text-sm text-[#37434f] overflow-x-hidden max-w-[173px] pl-3">
+                                    01_iPhone 7 case
+                                </td>
+                                <td class="flex items-center justify-start w-full min-h-full border-l-[1px] border-[#d0d0d0] text-sm text-[#37434f] overflow-x-hidden max-w-[247px] pl-3">
+                                    001_Research_iPhone_High
+                                </td>
+                                <td class="flex items-center justify-start w-full overflow-x-hidden min-h-full border-l-[1px] border-[#d0d0d0] text-sm text-[#37434f] overflow-x-hidden max-w-[268px] pl-3">
+                                    &nbsp;
+                                </td>
+                                <td class="flex items-center justify-start w-full min-h-full font-semibold border-l-[1px] border-[#d0d0d0] text-sm text-[#65707a] overflow-x-hidden max-w-[295px] pl-3">
+                                    iphone 8 magnetic wallet case 
+                                </td>
+                                <td class="flex items-center justify-start w-full min-h-full font-semibold border-l-[1px] border-[#d0d0d0] text-sm text-[#37434f] overflow-x-hidden max-w-[187px] pl-3">
+                                    Negative exact
+                                </td>
+                                <td class="w-40 py-3 min-h-full flex items-center justify-center border-l-[1px] border-[#d0d0d0] text-sm max-w-[36px]">
+                                    <i class="fa-sharp fa-solid fa-x cursor-pointer pl-0"></i>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                </div>
+                <div class="table-footer flex items-center justify-between text-footer_text font-medium pt-2 pb-16">
+                    <button class="w-[300px] h-[35px] text-sm text-white bg-add_button_bg rounded-3xl font-normal">
+                        <i class="fa-sharp fa-solid fa-arrow-left mr-4"></i> Save and Back to Sort Analyze Page
+                    </button>
+                    <div class="flex items-center justify-between gap-3">
+                        <p class="text-footer_text text-sm">
+                            Go to page
+                        </p>
+                        <input type="text" placeholder="1" class="w-[35px] h-[35px] rounded-md flex items-center justify-center placeholder:text-sm text-sm border-[1px] border-scrollable_title_border text-center" name="page-number">
+                        <div class="flex items-center justify-between gap-1">
+                            <button class="pagination-prew flex items-center justify-center pagintation-button bg-button_bg text-pagination_button_color w-[31px] h-[31px] rounded-[50%]">
+                                <i class="fa-solid fa-chevron-left text-[12px]"></i>
+                            </button>
+                            <button class="pagination-next flex items-center justify-center pagintation-button bg-button_bg text-pagination_button_color w-[31px] h-[31px] rounded-[50%]">
+                                <i class="fa-solid fa-chevron-right text-[12px]"></i>
+                            </button>
+                        </div>
+                        <p class="text-sm">
+                            1-24 of 24 results
+                        </p>
+                        <div class="flex items-center justify-center gap-1 bg-button_bg rounded-2xl h-fit text-[13px] w-[170px] h-[32px]">
+                            <p class="pl-2">Result per page: 
+                                <div>
+                                    <div class="dropdown relative">
+                                        <div class="dropdown__button text-sm relative block w-full p-1 font-medium text-[13px] cursor-pointer">50</div>
+                                        <ul class="dropdown__list hidden absolute right-[-30px] top-[-40px] w-[175px] py-[7px] px-0 m-0 border-[1px] border-[#d0d0d0] bg-white overflow-hidden rounded-xl z-[1]">
+                                            <li class="dropdown__list-item m-0 p-0 border-b-0 py-[5px] px-5 cursor-pointer text-[13px] text-[#1d1d1d] capitalize font-normal transition-all relative hover:bg-[#e6e9ed] hover:before:w-[3px] hover:before:h-full hover:before:bg-[#0073c7] hover:before:left-0 hover:before:top-0 hover:before:contents-[''] hover:before:absolute hover:before:inline-block hover:before:z-[2]" data-value="50">50</li>
+                                            <li class="dropdown__list-item m-0 p-0 border-b-0 py-[5px] px-5 cursor-pointer text-[13px] text-[#1d1d1d] capitalize font-normal transition-all relative hover:bg-[#e6e9ed] hover:before:w-[3px] hover:before:h-full hover:before:bg-[#0073c7] hover:before:left-0 hover:before:top-0 hover:before:contents-[''] hover:before:absolute hover:before:inline-block hover:before:z-[2]" data-value="100">100</li>
+                                            <li class="dropdown__list-item m-0 p-0 border-b-0 py-[5px] px-5 cursor-pointer text-[13px] text-[#1d1d1d] capitalize font-normal transition-all relative hover:bg-[#e6e9ed] hover:before:w-[3px] hover:before:h-full hover:before:bg-[#0073c7] hover:before:left-0 hover:before:top-0 hover:before:contents-[''] hover:before:absolute hover:before:inline-block hover:before:z-[2]" data-value="200">200</li>
+                                            <li class="dropdown__list-item m-0 p-0 border-b-0 py-[5px] px-5 cursor-pointer text-[13px] text-[#1d1d1d] capitalize font-normal transition-all relative hover:bg-[#e6e9ed] hover:before:w-[3px] hover:before:h-full hover:before:bg-[#0073c7] hover:before:left-0 hover:before:top-0 hover:before:contents-[''] hover:before:absolute hover:before:inline-block hover:before:z-[2]" data-value="300">300</li>
+                                        </ul>
+                                        <input type="text" name="select-category" value="" class="dropdown__input-hidden">
+                                    </div>
+                                </div>
+                                <i class="fa-solid fa-chevron-down cursor-pointer text-[12px]"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="https://kit.fontawesome.com/e50b17d262.js" crossorigin="anonymous"></script>
+    <script src="./dropdown.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
