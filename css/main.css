@@ -1225,6 +1225,10 @@ video {
   max-width: 150px;
 }
 
+.max-w-\[70px\] {
+  max-width: 70px;
+}
+
 .table-fixed {
   table-layout: fixed;
 }
@@ -1735,6 +1739,11 @@ video {
   padding-right: 0.25rem;
 }
 
+.px-\[2px\] {
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
 .pt-4 {
   padding-top: 1rem;
 }
@@ -1847,6 +1856,22 @@ video {
   padding-left: 26px;
 }
 
+.pr-\[50\%\] {
+  padding-right: 50%;
+}
+
+.pl-\[2px\] {
+  padding-left: 2px;
+}
+
+.pr-\[2px\] {
+  padding-right: 2px;
+}
+
+.pr-\[4px\] {
+  padding-right: 4px;
+}
+
 .text-center {
   text-align: center;
 }
@@ -1910,6 +1935,10 @@ video {
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
+}
+
+.text-\[6px\] {
+  font-size: 6px;
 }
 
 .font-light {
