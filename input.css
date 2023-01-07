@@ -191,3 +191,12 @@ input[type="checkbox"] {
 .annonce-wrapper:hover .annonce {
     display: block;
 }
+
+/******** WORKS *********/
+
+td.overflow-hidden:has(.table-dropbtn:hover) {
+    overflow: visible !important;
+}
+
+
+/******** WORKS *********/

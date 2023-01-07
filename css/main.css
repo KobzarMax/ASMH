@@ -1860,10 +1860,6 @@ video {
   padding-left: 26px;
 }
 
-.pr-\[30\%\] {
-  padding-right: 30%;
-}
-
 .text-center {
   text-align: center;
 }
@@ -2349,6 +2345,14 @@ input[type="checkbox"] {
 .annonce-wrapper:hover .annonce {
   display: block;
 }
+
+/******** WORKS *********/
+
+td.overflow-hidden:has(.table-dropbtn:hover) {
+  overflow: visible !important;
+}
+
+/******** WORKS *********/
 
 .placeholder\:text-sm::-moz-placeholder {
   font-size: 0.875rem;
